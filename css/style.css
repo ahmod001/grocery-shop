@@ -1,0 +1,60 @@
+/* GoogleFont */
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@900&display=swap');
+
+
+:root {
+    --main-theme-color: #53a457;
+}
+
+body {
+    font-family: 'Roboto', sans-serif !important;
+}
+
+.latoFontStyle {
+    font-family: 'Lato', sans-serif !important;
+}
+
+.greenText {
+    color: var(--main-theme-color) !important;
+}
+
+.active {
+    color: var(--main-theme-color) !important;
+}
+
+.custom-success-color {
+    background-color: var(--main-theme-color) !important;
+    color: white !important;
+
+}
+
+.custom-success-color:hover {
+    background-color: #3c9941 !important;
+}
+
+/* This queary will remove Dalivery Man-img < col-md-6*/
+@media screen and (max-width: 768px) {
+    .dalivery-man-div {
+        display: none;
+    }
+}
+
+.our-specialty-div {
+    border: var(--main-theme-color) solid 1px;
+    border-radius: 40px;
+}
+
+.our-specialty-div:hover .specialty-icon {
+    transition: transform .02s 0s;
+    transform: scale(1.05);
+}
+
+.specialty-icon {
+    background-color: var(--main-theme-color);
+    border-radius: 50%;
+    color: white;
+    height: 65px;
+    width: 65px;
+}
