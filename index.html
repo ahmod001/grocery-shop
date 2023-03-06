@@ -8,8 +8,10 @@
     <title>Grocery Shop</title>
     <!-- Animation CSS -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
     <!-- Custom CSS here-->
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style-two.css">
     <!-- Bootstrap  -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
@@ -39,7 +41,7 @@
                             <a class="nav-link active px-lg-4" aria-current="page" href="#">Home</a>
                             <a class="nav-link" href="#">About</a>
                             <a class="nav-link px-lg-4" href="#">Products</a>
-                            <a class="nav-link " href="#">News</a>
+                            <a class="nav-link " href="#news">News</a>
                             <a class="nav-link px-lg-4" href="#">Contact</a>
                         </div>
 
@@ -55,7 +57,7 @@
         </div>
 
         <!-- TITLE SECTION -->
-        <div class="row d-flex align-items-center" style="min-height:82vh ;">
+        <div class="row d-flex align-items-center" style="min-height:81vh;">
             <!-- text  -->
             <div class="col-12 col-md-6 px-3" data-aos="fade-right">
                 <h5 class="fs-5">Super fast delivery</h5>
@@ -80,7 +82,7 @@
         </div>
 
         <!-- ABOUT-OUR-SERVICES SECTION -->
-        <div class="row overflow-hidden pb-3">
+        <div class="row overflow-hidden pb-md-3">
 
             <!-- #Free Shipping -->
             <div class="col-sm-9 mx-auto col-lg-6 col-xl-4 py-2 col-lg-4 px-4 px-lg-3 px-xl-4">
@@ -138,7 +140,11 @@
         </div>
 
         <!-- Customers choice-Product Images -->
-        <section class="pt-3 overflow-x-hidden" id="customer-choice-product"></section>
+        <section class="pt-3 pb-5 overflow-x-hidden"id="customer-choice-product">
+        </section>
+
+        <!-- Weekend Offer section here -->
+        <section class="py-5" id="weekend-offer"></section>
 
     </section>
 
@@ -148,8 +154,10 @@
         crossorigin="anonymous"></script>
     <!-- Animation JS -->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
     <!-- Custom JS -->
     <script src="js/app.js"></script>
+    <script src="js/weekend-offer.js"></script>
 
 </body>
 

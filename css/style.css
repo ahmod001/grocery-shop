@@ -3,7 +3,6 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Lato:wght@900&display=swap');
 
-
 :root {
     --main-theme-color: #53a457;
 }
@@ -11,7 +10,7 @@
 body {
     font-family: 'Roboto', sans-serif !important;
 }
-
+/* LatoFont used on Title*/
 .latoFontStyle {
     font-family: 'Lato', sans-serif !important;
 }
@@ -19,11 +18,12 @@ body {
 .greenText {
     color: var(--main-theme-color) !important;
 }
-
+/* Navbar */
 .active {
     color: var(--main-theme-color) !important;
 }
 
+/* Custom Greeen Btn */
 .custom-success-color {
     background-color: var(--main-theme-color) !important;
     color: white !important;
@@ -41,6 +41,7 @@ body {
     }
 }
 
+/* Spacial services section */
 .our-specialty-div {
     border: var(--main-theme-color) solid 1px;
     border-radius: 40px;

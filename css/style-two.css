@@ -1,0 +1,17 @@
+:root {
+    --main-theme-color: #53a457;
+}
+
+/* Customer choice product section*/
+.choice-product :hover img {
+    border-radius: 0% !important;
+    box-shadow: lightgray 0 5px 5px;
+    transition: transforms 0.12s 0s;
+    transform: scale(1.01);
+}
+
+/* For Weekend offer section */
+.weekend-offer {
+    background-color: var(--main-theme-color);
+    color: white;
+}
