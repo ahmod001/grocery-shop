@@ -40,7 +40,7 @@
                         <div class="navbar-nav text-lg-center">
                             <a class="nav-link active px-lg-4" aria-current="page" href="#">Home</a>
                             <a class="nav-link" href="#">About</a>
-                            <a class="nav-link px-lg-4" href="#">Products</a>
+                            <a class="nav-link px-lg-4" href="#products">Products</a>
                             <a class="nav-link " href="#news">News</a>
                             <a class="nav-link px-lg-4" href="#">Contact</a>
                         </div>
@@ -69,7 +69,7 @@
 
                 <div class="py-3">
                     <button style="border-radius: 25px !important;"
-                        class="btn btn-warning py-2 fs-5 px-3 text-muted">Shop Now
+                        class="btn btn-warning py-2 fs-5 px-3">Shop Now
                         <i class="bi bi-arrow-right"></i></button>
                 </div>
             </div>
@@ -140,11 +140,26 @@
         </div>
 
         <!-- Customers choice-Product Images -->
-        <section class="pt-3 pb-5 overflow-x-hidden"id="customer-choice-product">
+        <section class="pt-3 pb-5 overflow-x-hidden" id="customer-choice-product">
         </section>
 
         <!-- Weekend Offer section here -->
         <section class="py-5" id="weekend-offer"></section>
+
+        <!-- OUR Products -->
+        <section class="overflow-hidden">
+            <div class="text-center py-5">
+                <p>Top Selling <i class="bi bi-star"></i></p>
+                <h3 class="fw-bold">Check Our Products</h3>
+            </div>
+            <!-- Card -->
+            <div class="row" id="products"></div>
+            <!-- #Btn -->
+            <div class="py-3 d-flex justify-content-center">
+                <button style="border-radius: 25px !important;" class="btn btn-warning py-2 fs-5 px-3">View All Products
+                    <i class="bi bi-arrow-right"></i></button>
+            </div>
+        </section>
 
     </section>
 
@@ -158,6 +173,7 @@
     <!-- Custom JS -->
     <script src="js/app.js"></script>
     <script src="js/weekend-offer.js"></script>
+    <script src="js/product-card.js"></script>
 
 </body>
 
