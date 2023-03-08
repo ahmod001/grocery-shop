@@ -15,3 +15,28 @@
     background-color: var(--main-theme-color);
     color: white;
 }
+
+/* For Product  Cart */
+.cart button {
+    border: none;
+    border-radius: 5px;
+    width: 45px;
+    display: block;
+
+}
+
+.cart button:active {
+    transform: scale(.95);
+}
+
+.cart-btn:active {
+    transform: scale(.92);
+}
+
+.cart input {
+    border: none;
+    max-width: 55px;
+    height: 37px;
+    background-color: rgb(246, 239, 239) !important;
+    pointer-events: none;
+}
