@@ -25,10 +25,13 @@
 
 }
 
-.cart button, .cart-btn:active {
+.cart button:active {
     transform: scale(.95);
 }
 
+.cart-btn:active {
+    transform: scale(.92);
+}
 
 .cart input {
     border: none;

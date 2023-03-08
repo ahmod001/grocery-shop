@@ -1,4 +1,4 @@
-
+// Product Cards
 const productCards = function () {
     fetch('https://api.npoint.io/fd3d595fb5be03f5497b')
         .then(response => response.json())
@@ -9,6 +9,7 @@ const productCards = function () {
             productsSection.innerHTML = '';
 
             productDetails.forEach(product => {
+
                 productsSection.innerHTML += `
                 <div class="mx-auto mx-sm-0 pb-4 col-11 col-sm-6 col-md-4 col-lg-3"  data-aos="zoom-in">
                     <div class="card" style="max-width:25rem;">
@@ -21,7 +22,7 @@ const productCards = function () {
                                 <div>
                                     <h5 class="card-title">${product.name}</h5>
                                 </div>
-                                <!-- #Price per  units -->
+                                <!-- #Price per units -->
                                 <div>
                                     <h5 class="card-title fw-semibold">$<span>${product.price}</span> / ${product.type}</h5>
                                 </div>
@@ -31,7 +32,7 @@ const productCards = function () {
                                 <div>
                                     <!-- #Reviews -->
                                     <p style="font-size:small;">
-                                        <i class="bi bi-star-fill text-warning"></i> (${product.review} Review)
+                                        <span class="review"></span> (${product.review} Review)
                                     </p>
                                 </div>
                                 <!-- #Status -->
@@ -43,11 +44,11 @@ const productCards = function () {
                             <div class="d-flex justify-content-between">
                                 <div class="d-flex align-items-center cart">
     
-                                    <button class="fs-4" style="background-color: #ffe385;">—</button>
+                                    <button class="fs-4 minus-btn" style="background-color: #ffe385;">—</button>
     
-                                    <input class=" text-center fw-bold" value="1">
+                                    <input class="text-center fw-bold" value="1">
     
-                                    <button class="fs-4" style="background-color: #C0F3BE">+</button>
+                                    <button class="fs-4 plus-btn" style="background-color: #C0F3BE">+</button>
                                 </div>
                                 <div class="d-flex align-items-center px-3 justify-content-center">
                                     <p class="fs-2 cart-btn"><i class="bi bi-cart2"></i></p>
@@ -56,7 +57,15 @@ const productCards = function () {
                         </div>
                     </div>
                 </div>`
-            });
-
-        })
+            })
+        });
 }();
+
+document.getElementById('products').addEventListener('scroll', () => {
+    const plusBtn = document.querySelectorAll('.plus-btn');
+    plusBtn.forEach(btn => {
+        btn.addEventListener('click', () => {
+            console.log('6666666');
+        })
+    });
+})

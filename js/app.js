@@ -1,14 +1,14 @@
 // Customer Choice product injected from here
 document.getElementById('customer-choice-product').innerHTML = `
 <div class="text-center py-5">
-                <p>Customer's Choice <i class="bi bi-check-circle"></i></p>
+                <p>Customer's Choice</p>
                 <h3 class="fw-bold">Check Our Products</h3>
             </div>
 
             <!-- Product images -->
 
             <!-- #row-1 -->
-            <div class="row pb-4 " data-aos="fade-right">
+            <div class="row pb-4" data-aos="fade-right">
                 <div class="col-4 choice-product">
                     <div class="text-center">
                         <img class="rounded img-fluid"
@@ -59,3 +59,33 @@ document.getElementById('customer-choice-product').innerHTML = `
 // For Animation
 AOS.init({ once: true });
 
+// const customerChoiceFunc = function () {
+//     fetch('https://api.npoint.io/fd3d595fb5be03f5497b')
+//     .then(response => response.json())
+//     .then(data => {
+//         const images = data.customerChoiceProduct;
+//         console.log(images);
+//         const imgRowOne = document.getElementById('imgRowOne');
+//         imgRowOne.innerHTML = '';
+//         const imgRowTwo = document.getElementById('imgRowTwo');
+//         imgRowTwo.innerHTML = '';
+//         // DOM
+//         const DOM = (image) => {
+//             return `<div class="col-4 choice-product">
+//             <div class="text-center">
+//                 <img class="rounded img-fluid"
+//                     src="${image.imgLink}" alt="">
+//             </div>
+//         </div>`
+//         }
+//         // Loop
+//         images.forEach((img, i) => {
+
+//             if (i <= 2) {
+//                 imgRowOne.innerHTML += DOM(img);
+//             }else{
+//                 imgRowTwo.innerHTML += DOM(img)
+//             }
+//         });
+//     })   
+// }();
