@@ -2,7 +2,7 @@ document.getElementById('fishes&meats').innerHTML =
 `<div class="row overflow-x-hidden rounded weekend-offer py-5">
 
 <!-- #Text -->
-<div class=" col-md-7 d-flex align-items-center col-lg-6 px-4 px-md-5 pb-5 pb-md-0" data-aos="fade-right">
+<div class=" col-md-7 d-flex align-items-center col-lg-6 px-4 px-md-5 pb-5 pb-md-0" data-aos="fade-right" data-aos-delay="50">
     <div class="px-4">
         <p>Fishes & Meats</p>
         <p id="news" class="fs-2">We provide fresh & meats</p>
@@ -21,7 +21,7 @@ document.getElementById('fishes&meats').innerHTML =
 
 <!-- #Image -->
 <div class=" col-md-5 col-lg-6 d-flex justify-content-center align-items-center"
-data-aos="fade-left">
+data-aos="fade-left" data-aos-delay="25">
     <img src="css/images/meats&fishes.png" class="w-75"  alt="">
 </div>
 </div>`;
