@@ -40,3 +40,32 @@
     background-color: rgb(246, 239, 239) !important;
     pointer-events: none;
 }
+
+/* Footer */
+.link-icon {
+    background-color: #ffc107;
+    border-radius: 50%;
+    color: black;
+    height: 45px;
+    width: 45px;
+}
+
+li {
+    list-style: none;
+}
+
+#about h6 {
+    font-size: larger;
+}
+
+#about p {
+    font-size: large;
+}
+
+#about a {
+    font-size: large;
+    text-decoration: none !important;
+}
+#about .span{
+    font-size: medium;
+}
