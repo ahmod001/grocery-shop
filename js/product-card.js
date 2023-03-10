@@ -1,3 +1,29 @@
+// Rating Star Function
+const RatingStars = (id, numOfStars) => {
+    const ratingSpan = document.getElementById(id);
+    ratingSpan.innerText = '';
+
+    for (let i = 0; i < numOfStars; i++) {
+        ratingSpan.innerHTML+= `<i class="bi bi-star-fill text-warning"></i>`
+    }
+}
+
+// Event Handlers here
+const plusBtn = (id) => {
+    const inputField = document.getElementById(id);
+    inputField.value = Number.parseInt(inputField.value) + 1;
+}
+const minusBtn = (id) => {
+    const inputField = document.getElementById(id);
+    const getInputValue = Number.parseInt(inputField.value);
+
+    if (getInputValue > 1) {
+        inputField.value = getInputValue - 1;
+
+    }
+
+}
+
 // Product Cards
 const productCards = function () {
     fetch('https://api.npoint.io/fd3d595fb5be03f5497b')
@@ -8,10 +34,11 @@ const productCards = function () {
             const productsSection = document.getElementById('products');
             productsSection.innerHTML = '';
 
-            productDetails.forEach(product => {
+            productDetails.forEach((product, i) => {
+                const index = i + 1;
 
                 productsSection.innerHTML += `
-                <div class="mx-auto mx-sm-0 pb-4 col-11 col-sm-6 col-md-4 col-lg-3"  data-aos="zoom-in">
+                <div class="mx-auto mx-sm-0 pb-4 col-10 col-sm-6 col-md-4 col-lg-3"  data-aos="zoom-in">
                     <div class="card" style="max-width:25rem;">
                         <!-- #Product image-->
                         <img src="${product.img}"
@@ -32,7 +59,7 @@ const productCards = function () {
                                 <div>
                                     <!-- #Reviews -->
                                     <p style="font-size:small;">
-                                        <span class="review"></span> (${product.review} Review)
+                                        <span id="reviewOf${product.id}"></span> (${product.review} Review)
                                     </p>
                                 </div>
                                 <!-- #Status -->
@@ -44,11 +71,11 @@ const productCards = function () {
                             <div class="d-flex justify-content-between">
                                 <div class="d-flex align-items-center cart">
     
-                                    <button class="fs-4 minus-btn" style="background-color: #ffe385;">—</button>
+                                    <button onclick="minusBtn(${index})" class="fs-4 minus-btn" style="background-color: #ffe385;">—</button>
     
-                                    <input class="text-center fw-bold" value="1">
+                                    <input id="${product.id}" class="text-center fw-bold" value="1">
     
-                                    <button class="fs-4 plus-btn" style="background-color: #C0F3BE">+</button>
+                                    <button onclick="plusBtn(${index})" class="fs-4 plus-btn" style="background-color: #C0F3BE">+</button>
                                 </div>
                                 <div class="d-flex align-items-center px-3 justify-content-center">
                                     <p class="fs-2 cart-btn"><i class="bi bi-cart2"></i></p>
@@ -57,15 +84,7 @@ const productCards = function () {
                         </div>
                     </div>
                 </div>`
+                RatingStars(`reviewOf${product.id}`, product.rating)
             })
         });
 }();
-
-document.getElementById('products').addEventListener('scroll', () => {
-    const plusBtn = document.querySelectorAll('.plus-btn');
-    plusBtn.forEach(btn => {
-        btn.addEventListener('click', () => {
-            console.log('6666666');
-        })
-    });
-})

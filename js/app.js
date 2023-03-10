@@ -1,7 +1,7 @@
 // Customer Choice product injected from here
 document.getElementById('customer-choice-product').innerHTML = `
 <div class="text-center py-5">
-                <p>Customer's Choice</p>
+                <p>Customer's Choice <i class="bi bi-check2-circle"></i></p>
                 <h3 class="fw-bold">Check Our Products</h3>
             </div>
 

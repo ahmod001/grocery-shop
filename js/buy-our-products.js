@@ -1,11 +1,11 @@
 // buy our products html injected from here
-document.getElementById('buyOurProduct').innerHTML = `  <div class="row overflow-y-hidden">
-<div class="col-sm-6" data-aos="fade-down" data-aos-delay="100">
+document.getElementById('buyOurProduct').innerHTML = `<div class="row overflow-y-hidden">
+<div class="col-sm-6 pb-3 pb-sm-0" data-aos="fade-down" data-aos-delay="100">
     <div class="py-3">
         <p class="greenText fw-semibold">Buy Our Product</p>
         <h3 class="fw-bold">The product is currently available at Selected Retailers</h3>
     </div>
-    <div class="">
+    <div>
         <!-- Img used 600x511 -->
         <img src="css/images/vegtable.jpg" class="img-fluid rounded" alt="">
     </div>
