@@ -66,6 +66,14 @@ li {
     font-size: large;
     text-decoration: none !important;
 }
-#about .span{
+
+#about .span {
     font-size: medium;
+}
+
+/* Review */
+@media screen and (max-width: 992px) {
+    .what-people-saying-img img {
+        display: none !important;
+    }
 }

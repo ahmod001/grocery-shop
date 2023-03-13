@@ -4,15 +4,16 @@ const RatingStars = (id, numOfStars) => {
     ratingSpan.innerText = '';
 
     for (let i = 0; i < numOfStars; i++) {
-        ratingSpan.innerHTML+= `<i class="bi bi-star-fill text-warning"></i>`
+        ratingSpan.innerHTML += `<i class="bi bi-star-fill text-warning"></i>`
     }
 }
 
-// Event Handlers here
+//Plus btn EventHandler 
 const plusBtn = (id) => {
     const inputField = document.getElementById(id);
     inputField.value = Number.parseInt(inputField.value) + 1;
 }
+//Minus btn EventHandler 
 const minusBtn = (id) => {
     const inputField = document.getElementById(id);
     const getInputValue = Number.parseInt(inputField.value);
@@ -24,7 +25,7 @@ const minusBtn = (id) => {
 
 }
 
-// Product Cards
+// Product main Cards
 const productCards = function () {
     fetch('https://api.npoint.io/fd3d595fb5be03f5497b')
         .then(response => response.json())
@@ -38,7 +39,7 @@ const productCards = function () {
                 const index = i + 1;
 
                 productsSection.innerHTML += `
-                <div class="mx-auto mx-sm-0 pb-4 col-10 col-sm-6 col-md-4 col-lg-3"  data-aos="zoom-in">
+                <div class="mx-auto mx-sm-0 pb-4 col-10 col-sm-6 col-lg-4 col-xl-3"  data-aos="zoom-in">
                     <div class="card" style="max-width:25rem;">
                         <!-- #Product image-->
                         <img src="${product.img}"
@@ -78,12 +79,14 @@ const productCards = function () {
                                     <button onclick="plusBtn(${index})" class="fs-4 plus-btn" style="background-color: #C0F3BE">+</button>
                                 </div>
                                 <div class="d-flex align-items-center px-3 justify-content-center">
-                                    <p class="fs-2 cart-btn"><i class="bi bi-cart2"></i></p>
+                                    <p class="fs-2 cart-btn" onclick="cartBtnEvent(cart${product.id})"><i class="bi bi-cart2"></i></p>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>`
+
+                // Rating 4star function called here
                 RatingStars(`reviewOf${product.id}`, product.rating)
             })
         });
